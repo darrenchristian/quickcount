@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quickcount/screens/quick_count.dart';
 import 'screens/candidate_bar_chart.dart';
 
 void main() {
@@ -32,7 +33,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const CandidateBarChart(),
+      home: const QuickCount(),
     );
   }
 }

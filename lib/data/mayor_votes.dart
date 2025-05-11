@@ -1,13 +1,14 @@
+// MAYOR VOTES
 var JowarVotes = [
   {'id': 1, 'barangay': 'Banaban', 'votes': 500},
   {'id': 2, 'barangay': 'Baybay', 'votes': 0},
   {'id': 3, 'barangay': 'Binagbag', 'votes': 2000},
-  {'id': 4, 'barangay': 'Donacion', 'votes': 4343},
+  {'id': 4, 'barangay': 'Donacion', 'votes': 43},
   {'id': 5, 'barangay': 'Encanto', 'votes': 4078},
   {'id': 6, 'barangay': 'Laog', 'votes': 0},
   {'id': 7, 'barangay': 'Marungko', 'votes': 0},
-  {'id': 8, 'barangay': 'Niugan', 'votes': 0},
-  {'id': 9, 'barangay': 'Paltok', 'votes': 7650},
+  {'id': 8, 'barangay': 'Niugan', 'votes': 5000},
+  {'id': 9, 'barangay': 'Paltok', 'votes': 650},
   {'id': 10, 'barangay': 'Pulong Yantok', 'votes': 0},
   {'id': 11, 'barangay': 'San Roque', 'votes': 0},
   {'id': 12, 'barangay': 'Sta. Cruz', 'votes': 5000},
@@ -19,6 +20,45 @@ var JowarVotes = [
 
 var LDLVotes = [
   {'id': 1, 'barangay': 'Banaban', 'votes': 10000},
+  {'id': 2, 'barangay': 'Baybay', 'votes': 1230},
+  {'id': 3, 'barangay': 'Binagbag', 'votes': 0},
+  {'id': 4, 'barangay': 'Donacion', 'votes': 0},
+  {'id': 5, 'barangay': 'Encanto', 'votes': 0},
+  {'id': 6, 'barangay': 'Laog', 'votes': 0},
+  {'id': 7, 'barangay': 'Marungko', 'votes': 521},
+  {'id': 8, 'barangay': 'Niugan', 'votes': 0},
+  {'id': 9, 'barangay': 'Paltok', 'votes': 0},
+  {'id': 10, 'barangay': 'Pulong Yantok', 'votes': 0},
+  {'id': 11, 'barangay': 'San Roque', 'votes': 0},
+  {'id': 12, 'barangay': 'Sta. Cruz', 'votes': 0},
+  {'id': 13, 'barangay': 'Sta. Lucia', 'votes': 0},
+  {'id': 14, 'barangay': 'Sto. Cristo', 'votes': 0},
+  {'id': 15, 'barangay': 'Sulucan', 'votes': 0},
+  {'id': 16, 'barangay': 'Taboc', 'votes': 0},
+];
+
+//VICE MAYOR
+var ArvinVotes = [
+  {'id': 1, 'barangay': 'Banaban', 'votes': 12300},
+  {'id': 2, 'barangay': 'Baybay', 'votes': 0},
+  {'id': 3, 'barangay': 'Binagbag', 'votes': 0},
+  {'id': 4, 'barangay': 'Donacion', 'votes': 0},
+  {'id': 5, 'barangay': 'Encanto', 'votes': 0},
+  {'id': 6, 'barangay': 'Laog', 'votes': 0},
+  {'id': 7, 'barangay': 'Marungko', 'votes': 0},
+  {'id': 8, 'barangay': 'Niugan', 'votes': 0},
+  {'id': 9, 'barangay': 'Paltok', 'votes': 0},
+  {'id': 10, 'barangay': 'Pulong Yantok', 'votes': 0},
+  {'id': 11, 'barangay': 'San Roque', 'votes': 0},
+  {'id': 12, 'barangay': 'Sta. Cruz', 'votes': 0},
+  {'id': 13, 'barangay': 'Sta. Lucia', 'votes': 0},
+  {'id': 14, 'barangay': 'Sto. Cristo', 'votes': 0},
+  {'id': 15, 'barangay': 'Sulucan', 'votes': 0},
+  {'id': 16, 'barangay': 'Taboc', 'votes': 0},
+];
+
+var OcaVotes = [
+  {'id': 1, 'barangay': 'Banaban', 'votes': 6500},
   {'id': 2, 'barangay': 'Baybay', 'votes': 0},
   {'id': 3, 'barangay': 'Binagbag', 'votes': 0},
   {'id': 4, 'barangay': 'Donacion', 'votes': 0},
