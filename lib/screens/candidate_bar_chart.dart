@@ -49,13 +49,13 @@ class _CandidateBarChartState extends State<CandidateBarChart> {
     _chartData = [
       CandidateChartData(
         'Candidate 2', // This is LDL
-        'L. DE LEON',
+        'LDL',
         'assets/images/ldl.jpg', // Ensure this path is correct & image exists
         ldlTotalVotes,
       ),
       CandidateChartData(
         'Candidate 1', // This is Jowar
-        'JOWAR BAUTISTA',
+        'JOWAR',
         'assets/images/jowar.jpg', // Ensure this path is correct & image exists
         jowarTotalVotes,
       ),
@@ -76,10 +76,10 @@ class _CandidateBarChartState extends State<CandidateBarChart> {
 
   @override
   Widget build(BuildContext context) {
-    const double imageWidth = 150.0;
-    const double spaceBetweenImageText = 8.0;
+    const double imageWidth = 10.0;
+    const double spaceBetweenImageText = 5.0;
     const double averageTextWidth = 60.0;
-    const double annotationPadding = 4.0;
+    const double annotationPadding = 5.0;
     const double estimatedAnnotationWidth =
         imageWidth +
         spaceBetweenImageText +
@@ -133,89 +133,106 @@ class _CandidateBarChartState extends State<CandidateBarChart> {
               Padding(
                 padding: const EdgeInsets.all(5.0),
                 child: Container(
-                  padding: const EdgeInsets.all(16),
                   decoration: BoxDecoration(
                     color: Colors.white.withOpacity(0.5),
                     borderRadius: BorderRadius.circular(16),
                   ),
-                  child: Column(
+                  child: Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      Container(
-                        height: 300,
-                        child: SfCartesianChart(
-                          title: ChartTitle(
-                            text: 'MAYORAL VOTES FOR 2025',
-                            textStyle: TextStyle(
-                              color: Colors.black,
-                              fontSize: 30,
-                              fontFamily: GoogleFonts.montserrat().fontFamily,
-                            ),
-                          ),
-                          primaryXAxis: CategoryAxis(
-                            labelStyle: TextStyle(
-                              fontSize: 0.01,
-                              color: Colors.transparent,
-                              fontFamily: GoogleFonts.montserrat().fontFamily,
-                            ),
-                            majorTickLines: const MajorTickLines(size: 0),
-                            majorGridLines: const MajorGridLines(width: 0),
-                            axisLine: const AxisLine(width: 0),
-                          ),
-                          primaryYAxis: NumericAxis(
-                            minimum: 0,
-                            title: const AxisTitle(text: 'Votes'),
-                            plotOffset: plotOffsetValue,
-                            labelStyle: TextStyle(
-                              fontSize: 0.01,
-                              color: Colors.transparent,
-                              fontFamily: GoogleFonts.montserrat().fontFamily,
-                            ),
-                            majorGridLines: const MajorGridLines(width: 0),
-                            majorTickLines: const MajorTickLines(size: 0),
-                            axisLine: const AxisLine(width: 0),
-                          ),
-                          tooltipBehavior: _tooltipBehavior,
-                          series: <CartesianSeries<CandidateChartData, String>>[
-                            BarSeries<CandidateChartData, String>(
-                              dataSource: _chartData,
-                              xValueMapper:
-                                  (CandidateChartData data, _) =>
-                                      data.candidateId,
-                              yValueMapper:
-                                  (CandidateChartData data, _) => data.votes,
-                              name: 'Votes',
-                              borderRadius: BorderRadius.circular(8),
-                              dataLabelSettings: DataLabelSettings(
-                                isVisible: true,
-                                textStyle: TextStyle(
-                                  fontSize: 50,
-                                  fontFamily:
-                                      GoogleFonts.montserrat().fontFamily,
-                                ),
+                      //row 1
+                      Expanded(
+                        flex: 3,
+                        child: Container(
+                          height: 300,
+                          color: Colors.white,
+                          child: SfCartesianChart(
+                            title: ChartTitle(
+                              text: 'MAYORAL VOTES FOR 2025',
+                              textStyle: TextStyle(
+                                color: Colors.black,
+                                fontSize: 30,
+                                fontFamily: GoogleFonts.montserrat().fontFamily,
                               ),
-                              dataLabelMapper:
-                                  (CandidateChartData data, _) =>
-                                      NumberFormat('#,###').format(data.votes),
-
-                              // === ADD POINT COLOR MAPPER HERE ===
-                              pointColorMapper: (CandidateChartData data, _) {
-                                if (data.displayLabel == 'JOWAR BAUTISTA') {
-                                  return _hexToColor(
-                                    '0c2db8',
-                                  ).withOpacity(0.8); // Deep Blue for Jowar
-                                } else if (data.displayLabel == 'L. DE LEON') {
-                                  return Colors.red.withOpacity(
-                                    0.8,
-                                  ); // Red for LDL
-                                }
-                                return Colors.grey; // Default color if no match
-                              },
-                              // width: 0.8, // Optional: bar thickness
                             ),
-                          ],
-                          annotations: _buildAnnotations(),
+                            primaryXAxis: CategoryAxis(
+                              labelStyle: TextStyle(
+                                fontSize: 0.01,
+                                color: Colors.transparent,
+                                fontFamily: GoogleFonts.montserrat().fontFamily,
+                              ),
+                              majorTickLines: const MajorTickLines(size: 0),
+                              majorGridLines: const MajorGridLines(width: 0),
+                              axisLine: const AxisLine(width: 0),
+                            ),
+                            primaryYAxis: NumericAxis(
+                              minimum: 0,
+                              title: const AxisTitle(text: 'Votes'),
+                              plotOffset: plotOffsetValue,
+                              labelStyle: TextStyle(
+                                fontSize: 0.01,
+                                color: Colors.transparent,
+                                fontFamily: GoogleFonts.montserrat().fontFamily,
+                              ),
+                              majorGridLines: const MajorGridLines(width: 0),
+                              majorTickLines: const MajorTickLines(size: 0),
+                              axisLine: const AxisLine(width: 0),
+                            ),
+                            tooltipBehavior: _tooltipBehavior,
+                            series: <
+                              CartesianSeries<CandidateChartData, String>
+                            >[
+                              BarSeries<CandidateChartData, String>(
+                                dataSource: _chartData,
+                                xValueMapper:
+                                    (CandidateChartData data, _) =>
+                                        data.candidateId,
+                                yValueMapper:
+                                    (CandidateChartData data, _) => data.votes,
+                                name: 'Votes',
+                                borderRadius: BorderRadius.circular(8),
+                                dataLabelSettings: DataLabelSettings(
+                                  isVisible: true,
+                                  textStyle: TextStyle(
+                                    fontSize: 50,
+                                    fontFamily:
+                                        GoogleFonts.montserrat().fontFamily,
+                                  ),
+                                ),
+                                dataLabelMapper:
+                                    (CandidateChartData data, _) =>
+                                        NumberFormat(
+                                          '#,###',
+                                        ).format(data.votes),
+
+                                // === ADD POINT COLOR MAPPER HERE ===
+                                pointColorMapper: (CandidateChartData data, _) {
+                                  if (data.displayLabel == 'JOWAR BAUTISTA') {
+                                    return _hexToColor(
+                                      '0c2db8',
+                                    ).withOpacity(0.8); // Deep Blue for Jowar
+                                  } else if (data.displayLabel ==
+                                      'L. DE LEON') {
+                                    return Colors.red.withOpacity(
+                                      0.8,
+                                    ); // Red for LDL
+                                  }
+                                  return Colors
+                                      .grey; // Default color if no match
+                                },
+                                // width: 0.8, // Optional: bar thickness
+                              ),
+                            ],
+                            annotations: _buildAnnotations(),
+                          ),
                         ),
+                      ),
+
+                      //row 2
+                      Expanded(
+                        flex: 2,
+                        child: Container(height: 300, color: Colors.red),
                       ),
                     ],
                   ),
@@ -234,9 +251,9 @@ class _CandidateBarChartState extends State<CandidateBarChart> {
       annotations.add(
         CartesianChartAnnotation(
           widget: Container(
-            padding: const EdgeInsets.only(right: 4.0),
             child: Column(
               mainAxisSize: MainAxisSize.min,
+              mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[
                 Container(
                   decoration: BoxDecoration(
@@ -258,7 +275,7 @@ class _CandidateBarChartState extends State<CandidateBarChart> {
                         );
                         return Icon(
                           Icons.broken_image,
-                          size: 150,
+                          size: 100,
                           color: Colors.grey[400],
                         );
                       },
