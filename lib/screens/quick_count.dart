@@ -7,6 +7,7 @@ import '../data/mayor_votes.dart';
 import '../models/candidate_chart_data.dart';
 import '../data/councilor_votes.dart';
 import '../data/cong_and_bm.dart';
+import '../data/party_list.dart';
 
 class QuickCount extends StatefulWidget {
   const QuickCount({super.key});
@@ -23,6 +24,7 @@ class _QuickCountState extends State<QuickCount> {
   late Future<bool> _loadingFuture;
   late List<CandidateChartData> _congData;
   late List<CandidateChartData> _bmData;
+  late List<CandidateChartData> _partyListData;
   @override
   void initState() {
     super.initState();
@@ -354,7 +356,7 @@ class _QuickCountState extends State<QuickCount> {
       CandidateChartData(
         'Candidate 1', // This is LDL
         'PLEYTO',
-        'assets/images/ldl.jpg', // Ensure this path is correct & image exists
+        'assets/images/pleyto.jpg', // Ensure this path is correct & image exists
         cong1_votes,
         '0c2db8',
       ),
@@ -403,6 +405,21 @@ class _QuickCountState extends State<QuickCount> {
         '', // Ensure this path is correct & image exists
         bm6_votes,
         '008000',
+      ),
+    ];
+
+    int apatDapatTotalVotes = apatDapat.fold(
+      0,
+      (sum, item) => sum + (item['votes'] as int),
+    );
+
+    _partyListData = [
+      CandidateChartData(
+        'Candidate 1',
+        'APATDAPAT',
+        '',
+        apatDapatTotalVotes,
+        '0c2db8',
       ),
     ];
     // Sort based on votes (ascending order - lower votes first, higher votes last)
@@ -530,23 +547,24 @@ class _QuickCountState extends State<QuickCount> {
                                 data: _congData,
                                 pointColorMapper: _hexToColor,
                                 title: 'CONGRESSMAN 2025',
-                                height: 200,
+                                height: 180,
                                 fontSize: 25,
+                                withImage: true,
                               ),
                               CandidateBarChart(
                                 tooltipBehavior: _tooltipBehavior,
                                 data: _bmData,
                                 pointColorMapper: _hexToColor,
                                 title: 'BOARD MEMBERS 2025',
-                                height: 350,
+                                height: 330,
                                 fontSize: 20,
                               ),
                               CandidateBarChart(
                                 tooltipBehavior: _tooltipBehavior,
-                                data: _congData,
+                                data: _partyListData,
                                 pointColorMapper: _hexToColor,
                                 title: 'PARTYLIST 2025',
-                                height: 120,
+                                height: 150,
                                 fontSize: 20,
                               ),
                             ],

@@ -1,0 +1,18 @@
+var apatDapat = [
+  {'id': 1, 'barangay': 'Banaban', 'votes': 7000},
+  {'id': 2, 'barangay': 'Baybay', 'votes': 0},
+  {'id': 3, 'barangay': 'Binagbag', 'votes': 0},
+  {'id': 4, 'barangay': 'Donacion', 'votes': 0},
+  {'id': 5, 'barangay': 'Encanto', 'votes': 0},
+  {'id': 6, 'barangay': 'Laog', 'votes': 0},
+  {'id': 7, 'barangay': 'Marungko', 'votes': 0},
+  {'id': 8, 'barangay': 'Niugan', 'votes': 0},
+  {'id': 9, 'barangay': 'Paltok', 'votes': 0},
+  {'id': 10, 'barangay': 'Pulong Yantok', 'votes': 0},
+  {'id': 11, 'barangay': 'San Roque', 'votes': 0},
+  {'id': 12, 'barangay': 'Sta. Cruz', 'votes': 0},
+  {'id': 13, 'barangay': 'Sta. Lucia', 'votes': 0},
+  {'id': 14, 'barangay': 'Sto. Cristo', 'votes': 0},
+  {'id': 15, 'barangay': 'Sulucan', 'votes': 0},
+  {'id': 16, 'barangay': 'Taboc', 'votes': 0},
+];
