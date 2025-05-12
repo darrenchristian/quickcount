@@ -132,12 +132,12 @@ class _QuickCountState extends State<QuickCount> {
 
         // Board member data
         _bmData = [
-          CandidateChartData('Candidate 1', 'ANGEL', '', totalVotes['bm1_angel'] ?? 0, 'FF0000'),
+          CandidateChartData('Candidate 1', 'ANGEL', '', totalVotes['bm1_angel'] ?? 0, '008000'),
           CandidateChartData('Candidate 2', 'JAY', '', totalVotes['bm2_jay'] ?? 0, '0c2db8'),
-          CandidateChartData('Candidate 3', 'MARY', '', totalVotes['bm3_mary'] ?? 0, 'FF0000'),
+          CandidateChartData('Candidate 3', 'MARY', '', totalVotes['bm3_mary'] ?? 0, '008000'),
           CandidateChartData('Candidate 4', 'ART', '', totalVotes['bm4_art'] ?? 0, '0c2db8'),
           CandidateChartData('Candidate 5', 'DOC', '', totalVotes['bm5_doc'] ?? 0, 'FF0000'),
-          CandidateChartData('Candidate 6', 'MARISA', '', totalVotes['bm6_marisa'] ?? 0, '0c2db8'),
+          CandidateChartData('Candidate 6', 'MARISA', '', totalVotes['bm6_marisa'] ?? 0, '008000'),
           // Add other board members similarly
         ];
 
