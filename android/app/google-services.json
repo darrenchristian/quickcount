@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "46590929367",
+    "project_id": "quickcount-123222a",
+    "storage_bucket": "quickcount-123222a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:46590929367:android:8c4b3d53332e66a42a0392",
+        "android_client_info": {
+          "package_name": "com.example.quickcount"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBXwLOY6M_uOIhujpPnGrQDz-__fdwUkVM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

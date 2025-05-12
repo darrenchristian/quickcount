@@ -2,7 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:quickcount/screens/quick_count.dart';
 import 'screens/candidate_bar_chart.dart';
 
-void main() {
+import 'package:supabase_flutter/supabase_flutter.dart';
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Supabase.initialize(
+    url: 'https://afzqkyxdckmvyjadpdhx.supabase.co',
+    anonKey:
+        'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFmenFreXhkY2ttdnlqYWRwZGh4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDcwMDY5MDAsImV4cCI6MjA2MjU4MjkwMH0.ymazQxRd9ucDdGwnGIK3qPe3mXHRn7ew35EvfJMAmg8',
+  );
   runApp(const MyApp());
 }
 
